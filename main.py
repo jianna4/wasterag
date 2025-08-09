@@ -27,7 +27,7 @@ print("Vector store created with FAISS.")
 retriever = vectorstore.as_retriever()
 
 qa_chain = RetrievalQA.from_chain_type(
-    llm=Ollama(model="tinnyllama"),
+    llm=Ollama(model="tinyllama"),
     chain_type="stuff",
     retriever=retriever,
     return_source_documents=True
