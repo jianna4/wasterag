@@ -39,3 +39,18 @@ documents = [
 ]
 
 print(f"Created {len(documents)} logical chunks (School + Department)")
+
+# 6️⃣ Save as TXT (only the text, each chunk separated by a line)
+with open("chunks.txt", "w", encoding="utf-8") as f:
+    for doc in documents:
+        f.write(doc.page_content + "\n\n")  # blank line between chunks
+
+# 7️⃣ Save as JSON (with metadata)
+json_data = [
+    {"content": doc.page_content, "metadata": doc.metadata}
+    for doc in documents
+]
+with open("chunks.json", "w", encoding="utf-8") as f:
+    json.dump(json_data, f, indent=4, ensure_ascii=False)
+
+print("✅ Saved chunks to chunks.txt and chunks.json")
