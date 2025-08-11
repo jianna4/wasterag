@@ -6,7 +6,7 @@ from langchain.schema import Document
 import json
 import os
 
-with open("chunks.json", "r", encoding="utf-8") as f:
+with open(r"F:\projects\wasteRAG\fol\chunks.json", "r", encoding="utf-8") as f:
     json_data = json.load(f)
 # Convert JSON data to LangChain Documents
 documents = [
