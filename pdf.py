@@ -3,7 +3,7 @@ now i im about to do some pdf dataset processing and cleaning,ready for embeddin
 
 from langchain.document_loaders import PyPDFLoader
 from langchain.schema import Document
-
+import json
 pdf_path = r"F:\projects\wasteRAG\fol\MUT-all-Programmes-2.pdf"
 loader = PyPDFLoader(pdf_path)
 loader.raise_for_errors = True
