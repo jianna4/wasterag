@@ -1,5 +1,5 @@
 """
-now i im about to do some pdf dataset processing and cleaning,ready for embedding and vectorization"""
+now i im about to do some pdf dataset processing and cleaning,ready for embedding and vectorization for h erag"""
 
 from langchain.document_loaders import PyPDFLoader
 from langchain.schema import Document
